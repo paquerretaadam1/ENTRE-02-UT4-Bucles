@@ -19,8 +19,16 @@ public class PintorFiguras
      * 
      * (usa bucles for)
      */
-    public  void dibujarFigura(int altura) {
-        
+    public void dibujarFigura(int altura) {
+        for(int contador = 1; contador <= altura; contador++){
+            for(int contador2 = 0; contador2 <= contador; contador++){
+                System.out.print(CAR1);
+                contador2++;
+                System.out.print(CAR2);
+                contador2++;
+            }
+            System.out.println();
+        }
     }
 
     /**
