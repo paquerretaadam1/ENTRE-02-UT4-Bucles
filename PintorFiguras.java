@@ -2,7 +2,7 @@
 /**
  *  Clase que dibuja una figura 
  * 
- * @author - 
+ * @author - Pedro J. Aquerreta
  *  
  */
 public class PintorFiguras
@@ -20,25 +20,18 @@ public class PintorFiguras
      */
     public void dibujarFigura(int altura) {
         int valorInicial = 1;
-        int ancho = valorInicial;
-        for(int contador = valorInicial; contador <= altura; contador++){
+        for(int contador = valorInicial; contador <= altura; contador++){               //nº de filas
             escribirEspacios(ESPACIO, altura - contador);
-            int contador2 = valorInicial;
-            for(contador2 = valorInicial; contador2 <= contador; contador2++){
-                while(ANCHO_BLOQUE >= ancho){
+            for(int contador2 = valorInicial; contador2 <= contador; contador2++){      
+                for(int ancho = valorInicial;ancho <= ANCHO_BLOQUE; ancho++  ){
                     System.out.print(CAR1);
-
-                    ancho++;
                 }
-                contador2++;
-                ancho = valorInicial;
+                ++contador2;
                 if(contador2 <= contador){
-                    while(ANCHO_BLOQUE >= ancho){
+                    for(int ancho = valorInicial;ancho <= ANCHO_BLOQUE; ancho++  ){
                         System.out.print(CAR2);
-                        ancho++;
                     }
                 }
-                ancho = valorInicial;
             }
             System.out.println();
         }
@@ -48,12 +41,9 @@ public class PintorFiguras
      * Método privado de ayuda que escribe n espacios en la misma línea
      */
     private void escribirEspacios(char caracter, int n) {
-        int ancho = 1;
         for (int fila = 1; fila <= n; fila++){
-            ancho = 1;
-            while(ANCHO_BLOQUE / 2 >= ancho){
+            for(int ancho = 1;ancho <= ANCHO_BLOQUE / 2; ancho++  ){
                 System.out.print(caracter);
-                ancho++;
             }
         }
     }

@@ -17,11 +17,14 @@ public class CalculadoraOctal
         int n = suma;
         int potencia = 10;
         int potencia2 = 1;
-        while(n > 0){
-            if (n % 10 > 7){
-                suma = suma - 8 * potencia2 + potencia; 
+        while(n > 1){
+            if (n1 % 10 + n2 % 10> 7){
+                suma = suma - 8 * potencia2 + potencia;     // la suma decimal de dos numeros la paso a octal
+                n1 =+ n1;                                   // nos llevamos una
             }
             n = n / 10;
+            n1= n1 / 10;
+            n2 = n2 / 10;
             potencia = potencia * 10;
             potencia2 = potencia2 * 10;
         }
